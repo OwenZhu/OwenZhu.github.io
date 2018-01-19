@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
@@ -53,7 +53,7 @@
     <script src="/scripts/main.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  -->
+    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </head>
 
@@ -61,7 +61,7 @@
         <body class="home-body">
     
     
-<header class="header index-header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -179,7 +179,7 @@
                 <div class="abstract-content">
                     MDP
 Bellman Expectation Equation。
-推导了v(s)和q(s, a)之间的转换公式，给定\gamma, R-pi和P-pi，Bellman Expectation Equation有解析解。接着讨论了Bellman Optimal Equation中v star和q star的转换。值得注意的是q(s, a) star的a是看做一个输入，之后再follow optimal pi star所得到的return的总和的期望。如果a的选择使得q star最大，那么v(s) star就等于q(s,a) star。Bellman Optimal Equation的v-...
+推导了v(s)和q(s, a)之间的转换公式，给定$\gamma$, $R\pi$和$P\pi$，Bellman Expectation Equation有解析解。接着讨论了Bellman Optimal Equation中v star和q star的转换。值得注意的是q(s, a) star的a是看做一个输入，之后再follow optimal pi star所得到的return的总和的期望。如果a的选择使得q star最大，那么v(s) star就等于q(s,a) star。Bellman Optimal Equat...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -450,8 +450,6 @@ Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Re
     
     
     
-    
-    
     <div class="total-archive"> Total : 5 </div>
     
     <div class="post-archive">
@@ -544,7 +542,22 @@ jsonContent:
     <!-- CNZZ统计  -->
     
     </div>
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 
