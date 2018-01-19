@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        OwenZhu&#39;s Blog
+        MDP · OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -58,14 +58,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >OwenZhu&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">MDP</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>OwenZhu's Blog</a>
 </header>
@@ -75,17 +84,17 @@
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/intro-desktop.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            OwenZhu's Blog
-            <!-- 文章页  -->
+            MDP
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -93,12 +102,30 @@
             <!-- 主页副标题  -->
             
             
-                the future is independent of the past given the present
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/01/19</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -166,184 +193,42 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/19/190118/" >
-                
-                    <span>MDP</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/19/190118/" >
-                <div class="abstract-content">
-                    MDP
-Bellman Expectation Equation。
-推导了v(s)和q(s, a)之间的转换公式，给定\gamma, R-pi和P-pi，Bellman Expectation Equation有解析解。接着讨论了Bellman Optimal Equation中v star和q star的转换。值得注意的是q(s, a) star的a是看做一个输入，之后再follow optimal pi star所得到的return的总和的期望。如果a的选择使得q star最大，那么v(s) star就等于q(s,a) star。Bellman Optimal Equation的v-...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/19</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/12/19/291217/" >
-                
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="MDP"><a href="#MDP" class="headerlink" title="MDP"></a>MDP</h2><ul>
+<li><p>Bellman Expectation Equation。</p>
+<p>推导了v(s)和q(s, a)之间的转换公式，给定\gamma, R-pi和P-pi，Bellman Expectation Equation有解析解。接着讨论了Bellman Optimal Equation中v star和q star的转换。值得注意的是q(s, a) star的a是看做一个输入，之后再follow optimal pi star所得到的return的总和的期望。如果a的选择使得q star最大，那么v(s) star就等于q(s,a) star。Bellman Optimal Equation的v-pi没有解析解，但是可以用迭代的方式来得到。</p>
+</li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2017/12/19/291217/" title= Tensorflow architecture analysis >
+                    <span>Previous Post</span>
                     <span>Tensorflow architecture analysis</span>
-            </a>
-            <a class="content-show-full" href = "/2017/12/19/291217/" >
-                <div class="abstract-content">
-                    Tensorflow architecture analysisThis article summarizes my understanding of distributed Tensorflow’s workflow. I’d like divide it into four parts:
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
 
-Create server
-Create a session
-Build a computation graph
-Run a session
+<!-- City版安装代码已完成 -->
+    
+    
+    <!--PC版-->
 
-So let’s start from creating a server.
-Create a servergrpc_tensorflow_server....
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/12/19</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/09/25/250917/" >
-                
-                    <span>Stochastic evolutionary game dynamics</span>
-            </a>
-            <a class="content-show-full" href = "/2017/09/25/250917/" >
-                <div class="abstract-content">
-                    Stochastic evolutionary game dynamics
-Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Reviews of Nonlinear Dynamics and Complexity, 2, 25–61.
+    <!--PC版-->
 
-文章由Arne Traulsen和Christoph Hauert共同撰写。该文章详细介绍了有关进化博弈理论的相关概念，同时给出了详细的数学模型。
-博弈论和进化博弈论在文章的开头作者指出了早期的博弈论（game theory）基于以下两个基本的假设...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/25</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/09/17/290917/" >
-                
-                    <span>TensorFlow Agents：基于TensorFlow的高效批处理增强学习</span>
-            </a>
-            <a class="content-show-full" href = "/2017/09/17/290917/" >
-                <div class="abstract-content">
-                    TensorFlow Agents：基于TensorFlow的高效批处理增强学习
-原文：  Hafner, D., Davidson, J., &amp; Vanhoucke, V. (2017). TensorFlow Agents: Efficient Batched Reinforcement Learning in TensorFlow. ArXiv:1709.02878 [Cs]. Retrieved from http://arxiv.org/abs/1709.02878
 
-谷歌大脑的研究人员开发出了TensorFlow Agents：基于TensorFlow的并行增强学习框...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/17</span>
-                </div>
-            </div>
-        </article>
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/08/16/160817/" >
-                
-                    <span>Social-ecological system in multi-agent game through reinforcement learning and deep learning</span>
-            </a>
-            <a class="content-show-full" href = "/2017/08/16/160817/" >
-                <div class="abstract-content">
-                    Social-ecological system in multi-agent game through reinforcement learning and deep learningIntroductionThere are series of particularly urgent global challenges nowadays, which is caused by the overexploitation of common resources, such as overexploitation of groundwater, petroleum, and mine. D...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/16</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/icon.jpeg >
-    <div class="profile-name">Owen Zhu</div>
-    
-    <div class="profile-signature">
-        I&#39;m a Mcs student from University of Melbourne, interesting in machine learning and reinforcement learning.
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:hanweiz@student.unimelb.edu.au" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="https://github.com/OwenZhu" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-            
-                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
-            
-        
-    
-
-    </div>
-    
-    
-    
-        <div class="about-me">
-            <div>
-                <a href = "/about" >ABOUT ME</a>
-            </div>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -389,6 +274,13 @@ Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Re
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MDP"><span class="toc-number">1.</span> <span class="toc-text">MDP</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
