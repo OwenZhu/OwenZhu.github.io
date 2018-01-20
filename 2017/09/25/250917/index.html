@@ -198,15 +198,15 @@
         <h1 id="Stochastic-evolutionary-game-dynamics"><a href="#Stochastic-evolutionary-game-dynamics" class="headerlink" title="Stochastic evolutionary game dynamics"></a>Stochastic evolutionary game dynamics</h1><blockquote>
 <p>Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Reviews of Nonlinear Dynamics and Complexity, 2, 25–61.</p>
 </blockquote>
-<p>文章由Arne Traulsen和Christoph Hauert共同撰写。该文章详细介绍了有关进化博弈理论的相关概念，同时给出了详细的数学模型。</p>
+<p>文章由Arne Traulsen和Christoph Hauert共同撰写。该文章详细介绍了有关进化博弈理论的相关概念，同时给出了完善的数学模型。</p>
 <h2 id="博弈论和进化博弈论"><a href="#博弈论和进化博弈论" class="headerlink" title="博弈论和进化博弈论"></a>博弈论和进化博弈论</h2><p>在文章的开头作者指出了早期的博弈论（game theory）基于以下两个基本的假设：</p>
 <ul>
 <li>人类是理性（rational）的</li>
 <li>与他们交互的对象同样清楚他们是理性的，反之亦然</li>
 </ul>
 <p>因此每个竞争者都可以通过优化一般效用函数（common utility function）来制定策略，确保能够将个人收益最大化；与此同时，他人采取的行动也能够完全通过该函数进行预判。但是作者指出，这样的假设是不切实际的——即使仅仅考虑个体A和个体B之间的简单互动，个体也无法做出绝对理性的决策：A预知到B的行为，B预知到A预知到B的行为……这将导致无穷的猜疑链。</p>
-<p>经济学领域提出了一种可避免上述情况的方法——有限的理性（bounded rationality）。如果将获取和处理信息的开销纳入考虑的范围，那么人类就无法做到完全理性。这等同于给他们的理性添加了约束上限，完全预测他人的行为也就不可能做到。</p>
-<p>生物学领域也产生了全然不同的处理方式。John Maynard Smith和 George Price于1970年代提出了进化博弈理论（evolutionary game theory）。他们认为效用函数（通常被认为是博弈的回报）应当等同于“生殖适应性”（reproductive fitness）。进化博弈理论与经典博弈理论不同于以下两个层面：</p>
+<p>经济学领域提出了一种可避免上述情况的方法——有限的理性（bounded rationality）。如果将获取和处理信息的开销纳入考虑的范围，那么人类就无法做到完全理性。这等同于给他们的“理性”添加了约束上限，完全预测他人的行为也就不可能做到。</p>
+<p>在生物学领域，研究者们也提出了全然不同的处理方式。John Maynard Smith和 George Price于1970年代提出了进化博弈理论（evolutionary game theory）。他们认为效用函数（通常被认为是博弈的回报）应当等同于“生殖适应性”（reproductive fitness）。进化博弈理论与经典博弈理论不同于以下两个层面：</p>
 <ul>
 <li>进化博弈理论的研究对象是基于群体的，而不是研究两个（或少量）单独的参与者</li>
 <li>进化博弈理论用自然的方式将动力学（dynamics）引入系统</li>
@@ -217,14 +217,14 @@
 <li>社会演化。成功个体的行为总是会被其他个体借鉴模仿</li>
 </ul>
 <h2 id="复制动力学"><a href="#复制动力学" class="headerlink" title="复制动力学"></a>复制动力学</h2><p>下面这个简单的数学公式展示了不同策略的进化密度函数：</p>
-<p><img src="http://latex.codecogs.com/gif.latex?\dot{x_{i}}=x_{i}\left(\pi_{i}-\left<\pi\right>\right)"></p>
-<p>上式称为复制方程（replicaor equation）。其中xi指策略类型i在群体中占的比例，pi是适应性值而\<pi\>是整个群体的平均回报。说明了如果类型i的Pi高出了\<pi\>，那么该策略类型的密度就会上升，反之则减少。如果对于所有策略的适应性pi值都是固定的话，就称之为固定选择（constant selection）。通常来说，策略类型i的Pi值取决于群体的构成——也就是取决于所有其他的策略类型的比例，所以这一动态变化是非线性的。</pi\></pi\></p>
-<p>接着作者通过简单的二人博弈（2x2 game）的例子展示了上述过程，在此不再赘述。通过演算复制方程，作者区分出了以下四种一般情形：</p>
+<script type="math/tex; mode=display">
+\dot{x_{i}}=x_{i}\left(\pi_{i}-\left<\pi\right>\right)</script><p>上式称为复制方程（replicaor equation）。其中$x_i$指策略类型$i$在群体中占的比例，$\pi$是适应性值而$\left&lt;\pi\right&gt;$是整个群体的平均回报。说明了如果类型i的$\pi$大于$\left&lt;\pi\right&gt;$，那么类型$\pi$的密度就会上升，反之则减少。如果对于所有策略的适应性pi值都是固定的话，就称之为固定选择（constant selection）。通常来说，策略类型i的Pi值取决于群体的构成——也就是取决于所有其他的策略类型的比例，所以这一动态变化是非线性的。</p>
+<p>接着作者通过经典的二人博弈（2x2 game）展示了上述过程。通过replicator equation，作者区分出了以下四种一般情形：</p>
 <ul>
-<li><strong>主导。</strong>这种情况下，不管对手采取什么样的行动，采取某种策略总是优于另一种。</li>
-<li><strong>双稳。</strong>相应的博弈称为协调博弈（coordination games）。个体能够找到平均收益最大化的策略，然而，如果对手是不能够信赖的，那么个体就应该转而避免承受最大损失的策略。这种情况将会导向风险主导（risk dominance）的层面。</li>
-<li><strong>共存。</strong>群体中稳定存在着不同策略类型的混合，但其密度是不稳定的。</li>
-<li><strong>中立。</strong>所有策略密度都是固定的。这样非普遍的情况激不起人们太大的兴趣，但是在有限群体的动态进化博弈里它将发挥重要作用。</li>
+<li><strong>Dominance</strong>：这种情况下，不管对手采取什么样的行动，采取某种特定的策略总是最优。</li>
+<li><strong>Bistability</strong>：相应的博弈称为协调博弈（coordination games）。个体能够找到平均收益最大化的策略。如果对手无法信赖，那么个体就应该转向能够避免最大损失的策略。这种情况将会导向风险主导（risk dominance）的层面。</li>
+<li><strong>Coexistence</strong>：群体中稳定存在着不同策略类型的混合，但其密度是不稳定的。</li>
+<li><strong>Neutrality</strong>：所有策略密度都是固定的。这样非普遍的情况激不起人们太大的兴趣，但是在有限群体的动态进化博弈里它将发挥重要作用。</li>
 </ul>
 <p>复制方程能够呈现丰富的动态内容：它能够表示基因通过复制以增强适应性和模仿他者的策略来决策。但是复制动力学仅仅只是确定动态选择（deterministic selection dynamics）的其中一种变体。它无法解释的是个体有时候能创造性地采用之前群体中从未出现过的策略。</p>
 <h2 id="有限群体中的进化博弈论"><a href="#有限群体中的进化博弈论" class="headerlink" title="有限群体中的进化博弈论"></a>有限群体中的进化博弈论</h2>
@@ -370,6 +370,14 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 5 </div>
     
     <div class="post-archive">
@@ -382,7 +390,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/19</span><a class="archive-post-title" href= "/2018/01/19/190118/" >MDP</a>
+            <span class="archive-post-date">01/19</span><a class="archive-post-title" href= "/2018/01/19/190118/" >Reinforcement learning (MDP)</a>
         </li>
     
     
@@ -418,6 +426,8 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

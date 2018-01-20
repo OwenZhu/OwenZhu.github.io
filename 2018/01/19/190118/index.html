@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        MDP · OwenZhu&#39;s Blog
+        Reinforcement learning (MDP) · OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -72,7 +72,7 @@
                 <a href="/" >OwenZhu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">MDP</a>
+                <a href="#" class="post-name">Reinforcement learning (MDP)</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            MDP
+            Reinforcement learning (MDP)
             <!-- 404 -->
             
         </h1>
@@ -108,6 +108,12 @@
         <!-- 文章页meta -->
         
             <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = reinforcement learning>reinforcement learning</a>
+    
+</div>
             
             <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
             <div class="post-intro-meta">
@@ -195,9 +201,21 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="MDP"><a href="#MDP" class="headerlink" title="MDP"></a>MDP</h2><ul>
+        <blockquote>
+<p>Reference: David Silver, UCL reinforcement learning, lecture 2</p>
+</blockquote>
+<h2 id="Markov-process-or-Markov-Chain"><a href="#Markov-process-or-Markov-Chain" class="headerlink" title="Markov process (or Markov Chain)"></a>Markov process (or Markov Chain)</h2><p>A Markov process is a tuple $\left&lt; S, P \right&gt;$. Therefore, it is quite simple: an agent has nothing to do in a Markov process, who just translates from one state to another state following the transition probability. </p>
+<h2 id="Markov-decision-process"><a href="#Markov-decision-process" class="headerlink" title="Markov decision process"></a>Markov decision process</h2><ul>
 <li><p>Bellman Expectation Equation</p>
-<p>推导了$v(s)$和$q(s, a)$之间的转换公式，given $\gamma$, $R_\pi$ and $P_\pi$，Bellman Expectation Equation有解析解。接着讨论了Bellman Optimal Equation中v star和q star的转换。值得注意的是q(s, a) star的a是看做一个输入，之后再follow optimal pi star所得到的return的总和的期望。如果a的选择使得q star最大，那么v(s) star就等于q(s,a) star。Bellman Optimal Equation的v-pi没有解析解，但是可以用迭代的方式来得到。</p>
+<p>The state-value function:</p>
+<script type="math/tex; mode=display">
+v_\pi(s)=E_\pi[R_{t+1}+\gamma v_\pi(S_{t+1}) |S_t=s]</script><p>The action-value function:</p>
+<script type="math/tex; mode=display">
+q_\pi(s, a)=E_\pi[R_{t+1}+\gamma q_\pi(S_{t+1},A_{t+1}) |S_t=s,A_t=a]</script><p>We can reform Bellman expectation equation, by replacing $v_\pi(s)$ with $q_\pi(s, a)$ or replacing $q_\pi(s, a)$ with $v_\pi(s)$ on the right-hand side. It’s very very important to understand the relationship between $v_\pi(s)$ and $q_\pi(s, a)$. We will find the equation appear everywhere in the latter lectures. Like in Markov process, We can directly find the closed form solution of Bellman expectation equation when given $\gamma$, $R_\pi$ and $P_\pi$. </p>
+<script type="math/tex; mode=display">
+v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
+<li><p>Bellman Optimal Equation</p>
+<p>In the same way, we also can reform the $v_*$ and $q_*$ in Bellman Optimal Equation. The $action$ in $q_*(s, a)$ is considered to be an input, after that the agent follows $pi^*$ and gains all returns. $v_*$ equals to $q_*$ only if the $action$ is $a^*$. There is no closed form solution of Bellman optimal equation. The $max()$ function is introduced to Bellman Optimal Equation, so it’s not linear. Instead, we can use other iteration approaches: policy iteration, value iteration, Q learning, Sarsa, etc.</p>
 </li>
 </ul>
 
@@ -279,7 +297,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MDP"><span class="toc-number">1.</span> <span class="toc-text">MDP</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-process-or-Markov-Chain"><span class="toc-number">1.</span> <span class="toc-text">Markov process (or Markov Chain)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-decision-process"><span class="toc-number">2.</span> <span class="toc-text">Markov decision process</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -336,6 +354,14 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 5 </div>
     
     <div class="post-archive">
@@ -348,7 +374,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/19</span><a class="archive-post-title" href= "/2018/01/19/190118/" >MDP</a>
+            <span class="archive-post-date">01/19</span><a class="archive-post-title" href= "/2018/01/19/190118/" >Reinforcement learning (MDP)</a>
         </li>
     
     
@@ -384,6 +410,8 @@
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
