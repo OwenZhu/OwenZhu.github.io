@@ -201,7 +201,7 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="MACHINE-TRANSLATION-PHRASE-BASED-amp-NEURAL-ENCODER-DECODER"><a href="#MACHINE-TRANSLATION-PHRASE-BASED-amp-NEURAL-ENCODER-DECODER" class="headerlink" title="MACHINE TRANSLATION: PHRASE BASED &amp; NEURAL ENCODER-DECODER"></a>MACHINE TRANSLATION: PHRASE BASED &amp; NEURAL ENCODER-DECODER</h1><h2 id="WORD-BASED-AND-PHRASE-BASED-MT"><a href="#WORD-BASED-AND-PHRASE-BASED-MT" class="headerlink" title="WORD-BASED AND PHRASE-BASED MT"></a>WORD-BASED AND PHRASE-BASED MT</h2><p><strong>Word based model</strong>: overly simplistic formulation — only used for _alignment_, not actual _translation_.</p>
+        <h2 id="WORD-BASED-AND-PHRASE-BASED-MT"><a href="#WORD-BASED-AND-PHRASE-BASED-MT" class="headerlink" title="WORD-BASED AND PHRASE-BASED MT"></a>WORD-BASED AND PHRASE-BASED MT</h2><p><strong>Word based model</strong>: overly simplistic formulation — only used for _alignment_, not actual _translation_.</p>
 <p><strong>Phrase based MT</strong>: treats N-grams as translation units, referred to as ‘phrases’.</p>
 <ul>
 <li><p>Phrase-pairs memorise:</p>
@@ -264,11 +264,18 @@ BLEU=bp * prec_{1-gram} * prec_{2-gram} * prec_{3-gram} * prec_{4-gram}</script>
     <!-- 前后页  -->
     <ul class="post-pager">
         
+            <li class="next">
+                <a href= "/2018/05/29/WSTA_L21_machine_translation_word/" title= WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS >
+                    <span>Next Post</span>
+                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
+                </a>
+            </li>
+        
         
             <li class="previous">
-                <a href= "/2018/05/29/WSTA_L21_machine_translation_word/" title= WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS >
+                <a href= "/2018/01/19/190118/" title= Lecture Notes for Reinforcement Learning (MDP) >
                     <span>Previous Post</span>
-                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
+                    <span>Lecture Notes for Reinforcement Learning (MDP)</span>
                 </a>
             </li>
         
@@ -338,7 +345,7 @@ BLEU=bp * prec_{1-gram} * prec_{2-gram} * prec_{3-gram} * prec_{4-gram}</script>
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MACHINE-TRANSLATION-PHRASE-BASED-amp-NEURAL-ENCODER-DECODER"><span class="toc-number">1.</span> <span class="toc-text">MACHINE TRANSLATION: PHRASE BASED &amp; NEURAL ENCODER-DECODER</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WORD-BASED-AND-PHRASE-BASED-MT"><span class="toc-number">1.1.</span> <span class="toc-text">WORD-BASED AND PHRASE-BASED MT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEURAL-MACHINE-TRANSLATION"><span class="toc-number">1.2.</span> <span class="toc-text">NEURAL MACHINE TRANSLATION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Evaluation"><span class="toc-number">1.3.</span> <span class="toc-text">Evaluation</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#WORD-BASED-AND-PHRASE-BASED-MT"><span class="toc-number">1.</span> <span class="toc-text">WORD-BASED AND PHRASE-BASED MT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEURAL-MACHINE-TRANSLATION"><span class="toc-number">2.</span> <span class="toc-text">NEURAL MACHINE TRANSLATION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Evaluation"><span class="toc-number">3.</span> <span class="toc-text">Evaluation</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -429,8 +436,6 @@ BLEU=bp * prec_{1-gram} * prec_{2-gram} * prec_{3-gram} * prec_{4-gram}</script>
     
     
     
-    
-    
     <div class="total-archive"> Total : 7 </div>
     
     <div class="post-archive">
@@ -443,12 +448,12 @@ BLEU=bp * prec_{1-gram} * prec_{2-gram} * prec_{3-gram} * prec_{4-gram}</script>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
         </li>
     
     
@@ -536,8 +541,23 @@ jsonContent:
     
     <!-- CNZZ统计  -->
     
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    </body>
+    </div>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 

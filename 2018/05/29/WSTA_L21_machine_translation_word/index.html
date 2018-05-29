@@ -201,7 +201,7 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="MACHINE-TRANSLATION-WORD-BASED-MODELS"><a href="#MACHINE-TRANSLATION-WORD-BASED-MODELS" class="headerlink" title="MACHINE TRANSLATION: WORD-BASED MODELS"></a>MACHINE TRANSLATION: WORD-BASED MODELS</h1><p>Translation is “AI-hard” challenge: preserving the _meaning_ and the _fluency_ of the text.</p>
+        <p>Translation is “AI-hard” challenge: preserving the _meaning_ and the _fluency_ of the text.</p>
 <h2 id="STATISTICAL-MT"><a href="#STATISTICAL-MT" class="headerlink" title="STATISTICAL MT"></a>STATISTICAL MT</h2><ul>
 <li><p>Noisy Channel Model</p>
 <p>Language model $P(e)$ -&gt; e -&gt; encoder channel $P(f|e)$ -&gt; f -&gt; decoder $argmax P(e|f)$ -&gt; $\hat{e}$</p>
@@ -232,18 +232,11 @@ P(F, A|E)=\frac{\epsilon}{(I+1)^J}\prod_{j=1}^{J}t(f_j|e_{a_j})</script><p>  Tra
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
-                    <span>Next Post</span>
-                    <span>WSTA 22 - MACHINE TRANSLATION</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2018/01/19/190118/" title= Lecture Notes for Reinforcement Learning (MDP) >
+                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
                     <span>Previous Post</span>
-                    <span>Lecture Notes for Reinforcement Learning (MDP)</span>
+                    <span>WSTA 22 - MACHINE TRANSLATION</span>
                 </a>
             </li>
         
@@ -313,7 +306,7 @@ P(F, A|E)=\frac{\epsilon}{(I+1)^J}\prod_{j=1}^{J}t(f_j|e_{a_j})</script><p>  Tra
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MACHINE-TRANSLATION-WORD-BASED-MODELS"><span class="toc-number">1.</span> <span class="toc-text">MACHINE TRANSLATION: WORD-BASED MODELS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#STATISTICAL-MT"><span class="toc-number">1.1.</span> <span class="toc-text">STATISTICAL MT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IBM-MODEL-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">IBM MODEL 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HMMS-FOR-ALIGNMENT"><span class="toc-number">1.1.2.</span> <span class="toc-text">HMMS FOR ALIGNMENT</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#STATISTICAL-MT"><span class="toc-number">1.</span> <span class="toc-text">STATISTICAL MT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IBM-MODEL-1"><span class="toc-number">1.1.</span> <span class="toc-text">IBM MODEL 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HMMS-FOR-ALIGNMENT"><span class="toc-number">1.2.</span> <span class="toc-text">HMMS FOR ALIGNMENT</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -404,8 +397,6 @@ P(F, A|E)=\frac{\epsilon}{(I+1)^J}\prod_{j=1}^{J}t(f_j|e_{a_j})</script><p>  Tra
     
     
     
-    
-    
     <div class="total-archive"> Total : 7 </div>
     
     <div class="post-archive">
@@ -418,12 +409,12 @@ P(F, A|E)=\frac{\epsilon}{(I+1)^J}\prod_{j=1}^{J}t(f_j|e_{a_j})</script><p>  Tra
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
         </li>
     
     
@@ -511,8 +502,23 @@ jsonContent:
     
     <!-- CNZZ统计  -->
     
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    </body>
+    </div>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 
