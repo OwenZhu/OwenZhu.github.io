@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Lecture Notes for Reinforcement Learning (MDP) · OwenZhu&#39;s Blog
+        WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS · OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -72,7 +72,7 @@
                 <a href="/" >OwenZhu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Lecture Notes for Reinforcement Learning (MDP)</a>
+                <a href="#" class="post-name">WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Lecture Notes for Reinforcement Learning (MDP)
+            WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS
             <!-- 404 -->
             
         </h1>
@@ -111,14 +111,14 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = reinforcement learning>reinforcement learning</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = NLP>NLP</a>
     
 </div>
             
             <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/19</span>
+                <span class="post-intro-time">2018/05/29</span>
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe604;</span>
                     <span id="busuanzi_value_page_pv"></span>
@@ -201,44 +201,49 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <blockquote>
-<p>Reference: David Silver, UCL reinforcement learning, lecture 2; CS 294 Deep Reinforcement Learning, Fall 2017</p>
-</blockquote>
-<h2 id="Markov-Process-or-Markov-Chain"><a href="#Markov-Process-or-Markov-Chain" class="headerlink" title="Markov Process (or Markov Chain)"></a>Markov Process (or Markov Chain)</h2><p>Here we assume that the environment is fully observable, which means “the current state completely characterises the process”.</p>
-<p>A Markov process is a tuple $\left&lt; S, P \right&gt;$, where $S$ denotes the state space (discrete or continuous) and $P$ denotes the state transition probability matrix. </p>
-<p>Sometimes we use the transition operator $T$ instead of $P$, but why it is an operator? Suppose we have a vector of probabilities $\vec{\mu}_t$ (which means we are not completely sure which state we are actually in), and let $\mu_{t,i} = p(s_t = i)$. Then $\vec{\mu}_{t+1}$ can be obtain by $T\vec{\mu}_t$, so it is a linear operator. If states are continuous it is still an infinitely large linear operator.</p>
-<p>Therefore, an agent has nothing to do in a Markov process, who just translates from one state to another state following by the transition probability. </p>
-<h2 id="Markov-Reward-Process"><a href="#Markov-Reward-Process" class="headerlink" title="Markov Reward Process"></a>Markov Reward Process</h2><p>A Markov process converts to a Markov reward process, when the reward function $R$ and discount factor $\gamma$ are introduced to it. An agent walks around (still totally depends on environment) and environment will give it a signal (reward).</p>
-<h2 id="Markov-Decision-Process"><a href="#Markov-Decision-Process" class="headerlink" title="Markov Decision Process"></a>Markov Decision Process</h2><ul>
-<li><p>Bellman Expectation Equation</p>
-<p>The state-value function:</p>
-<script type="math/tex; mode=display">
-v_\pi(s)=E_\pi[R_{t+1}+\gamma v_\pi(S_{t+1}) |S_t=s]</script><p>The action-value function:</p>
-<script type="math/tex; mode=display">
-q_\pi(s, a)=E_\pi[R_{t+1}+\gamma q_\pi(S_{t+1},A_{t+1}) |S_t=s,A_t=a]</script><p>We can reform Bellman expectation equation, by replacing $v_\pi(s)$ with $q_\pi(s, a)$ or replacing $q_\pi(s, a)$ with $v_\pi(s)$ on the right-hand side. It’s very very important to understand the relationship between $v_\pi(s)$ and $q_\pi(s, a)$ here. We will find the equation appear everywhere in the following lectures. Same as Markov process, we can find the direct closed form solution of Bellman expectation equation when given $\gamma$, $R_\pi$ and $P_\pi$. </p>
-<script type="math/tex; mode=display">
-v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
-<li><p>Bellman Optimal Equation</p>
-<p>In the same way, we can reform the Bellman Optimal Equation by $v_*$ or $q_*$. The $action$ in $q_*(s, a)$ is considered to be an input, after that the agent follows $\pi^*$ and gains all returns. $v_*$ equals to $q_*$ only if the $action$ is $a^*$. There is no closed form solution of Bellman optimal equation. The $max()$ function is introduced to Bellman Optimal Equation, so it’s not linear. Instead, we can use other iteration approaches: policy iteration, value iteration, Q learning, SARSA, etc.</p>
+        <h1 id="MACHINE-TRANSLATION-WORD-BASED-MODELS"><a href="#MACHINE-TRANSLATION-WORD-BASED-MODELS" class="headerlink" title="MACHINE TRANSLATION: WORD-BASED MODELS"></a>MACHINE TRANSLATION: WORD-BASED MODELS</h1><p>Translation is “AI-hard” challenge: preserving the _meaning_ and the _fluency_ of the text.</p>
+<h2 id="STATISTICAL-MT"><a href="#STATISTICAL-MT" class="headerlink" title="STATISTICAL MT"></a>STATISTICAL MT</h2><ul>
+<li><p>Noisy Channel Model</p>
+<p>Language model $P(e)$ -&gt; e -&gt; encoder channel $P(f|e)$ -&gt; f -&gt; decoder $argmax P(e|f)$ -&gt; $\hat{e}$</p>
+<p><strong>Two components</strong>: language model (LM); translation model (TM)</p>
+<p>TM: based on word co-occurrences in _parallel texts_</p>
+</li>
+<li><p>ALIGNMENT (rarely observed)</p>
+<ul>
+<li><p>$P(A(a_1, \ldots, a_J)|E(e_1, \ldots, e_I), F(f_1,\ldots,f_J))$</p>
+</li>
+<li><p>have to infer the alignments: probabilistic model use EM algorithm</p>
 </li>
 </ul>
-
+</li>
+</ul>
+<h3 id="IBM-MODEL-1"><a href="#IBM-MODEL-1" class="headerlink" title="IBM MODEL 1"></a>IBM MODEL 1</h3><p>  Formulate probabilistic model of translation:</p>
+<script type="math/tex; mode=display">
+P(F, A|E)=\frac{\epsilon}{(I+1)^J}\prod_{j=1}^{J}t(f_j|e_{a_j})</script><p>  Translation table: to learn the parameter tables $t$, need the word alignments</p>
+<p>Estimate the model (EM) algorithm (?):</p>
+<ol>
+<li>Make initial guess of $t$ parameters</li>
+<li>Estimate alignments $P(A|E,F)$ under our model</li>
+<li>Learn parameters $t$, based on expected alignments (from step 2)</li>
+<li>Repeat from step 2</li>
+</ol>
+<h3 id="HMMS-FOR-ALIGNMENT"><a href="#HMMS-FOR-ALIGNMENT" class="headerlink" title="HMMS FOR ALIGNMENT"></a>HMMS FOR ALIGNMENT</h3>
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2018/05/29/WSTA_L21_machine_translation_word/" title= WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS >
+                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
                     <span>Next Post</span>
-                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
+                    <span>WSTA 22 - MACHINE TRANSLATION</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2017/12/19/291217/" title= Tensorflow architecture analysis >
+                <a href= "/2018/01/19/190118/" title= Lecture Notes for Reinforcement Learning (MDP) >
                     <span>Previous Post</span>
-                    <span>Tensorflow architecture analysis</span>
+                    <span>Lecture Notes for Reinforcement Learning (MDP)</span>
                 </a>
             </li>
         
@@ -308,7 +313,7 @@ v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Process-or-Markov-Chain"><span class="toc-number">1.</span> <span class="toc-text">Markov Process (or Markov Chain)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Reward-Process"><span class="toc-number">2.</span> <span class="toc-text">Markov Reward Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Decision-Process"><span class="toc-number">3.</span> <span class="toc-text">Markov Decision Process</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MACHINE-TRANSLATION-WORD-BASED-MODELS"><span class="toc-number">1.</span> <span class="toc-text">MACHINE TRANSLATION: WORD-BASED MODELS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#STATISTICAL-MT"><span class="toc-number">1.1.</span> <span class="toc-text">STATISTICAL MT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IBM-MODEL-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">IBM MODEL 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HMMS-FOR-ALIGNMENT"><span class="toc-number">1.1.2.</span> <span class="toc-text">HMMS FOR ALIGNMENT</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
