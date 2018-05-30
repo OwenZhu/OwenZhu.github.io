@@ -225,20 +225,20 @@
 <li>Relevance vector $R <1,0,0,0,1\ldots>$ how to map it to a number? -&gt; precision &amp; recall (hard)<ul>
 <li>Precision @ k</li>
 <li>Average precision </li>
-<li>Mean Average Precision (MAP)<h2 id="RANK-BIASED-PRECISION"><a href="#RANK-BIASED-PRECISION" class="headerlink" title="RANK-BIASED PRECISION"></a>RANK-BIASED PRECISION</h2></li>
+<li>Mean Average Precision (MAP)</li>
 </ul>
 </1,0,0,0,1\ldots></li>
 </ul>
-<p>RBP Formula</p>
+<h2 id="RANK-BIASED-PRECISION"><a href="#RANK-BIASED-PRECISION" class="headerlink" title="RANK-BIASED PRECISION"></a>RANK-BIASED PRECISION</h2><p>RBP Formula</p>
 <script type="math/tex; mode=display">
 RBP=(1-p)\times\Sigma^{d}_{i=1}r_i\times p^{i-1}</script><p>Patient user: p = 0.95; Inpatient user: p = 0.50</p>
 <p>EFFECTIVENESS IN PRACTICE:</p>
 <ul>
 <li>Also look at query logs and click logs</li>
 <li>Construct (learn) a similarity metric <strong>automatically</strong> from training data (queries, click data, documents) </li>
-<li>Machine learning<h2 id="Learning-to-rank"><a href="#Learning-to-rank" class="headerlink" title="Learning to rank"></a>Learning to rank</h2></li>
+<li>Machine learning</li>
 </ul>
-<p>Training data $<q,d_i,u,r_i>$: learn to combine “features representing” $x=<q,d_i,u>$ to predict $r_i$</q,d_i,u></q,d_i,u,r_i></p>
+<h2 id="Learning-to-rank"><a href="#Learning-to-rank" class="headerlink" title="Learning to rank"></a>Learning to rank</h2><p>Training data $<q,d_i,u,r_i>$: learn to combine “features representing” $x=<q,d_i,u>$ to predict $r_i$</q,d_i,u></q,d_i,u,r_i></p>
 <p>LEARNING TO RANK OBJECTIVES:</p>
 <ul>
 <li>POINT-WISE OBJECTIVE<ul>
@@ -261,9 +261,9 @@ RBP=(1-p)\times\Sigma^{d}_{i=1}r_i\times p^{i-1}</script><p>Patient user: p = 0.
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
+                <a href= "/2018/05/29/WSTA_L21_machine_translation_word/" title= WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS >
                     <span>Next Post</span>
-                    <span>WSTA 22 - MACHINE TRANSLATION</span>
+                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
                 </a>
             </li>
         
@@ -435,16 +435,6 @@ RBP=(1-p)\times\Sigma^{d}_{i=1}r_i\times p^{i-1}</script><p>Patient user: p = 0.
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 8 </div>
     
     <div class="post-archive">
@@ -462,12 +452,12 @@ RBP=(1-p)\times\Sigma^{d}_{i=1}r_i\times p^{i-1}</script><p>Patient user: p = 0.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
         </li>
     
     
@@ -509,9 +499,9 @@ RBP=(1-p)\times\Sigma^{d}_{i=1}r_i\times p^{i-1}</script><p>Patient user: p = 0.
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">NLP</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">

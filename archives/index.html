@@ -158,17 +158,23 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/29/WSTA_L21_machine_translation_word/" >
+            <a class="abstract-title" href = "/2018/05/29/WSTA_L22_machine_translation_phrase/" >
                 
-                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
+                    <span>WSTA 22 - MACHINE TRANSLATION</span>
             </a>
-            <a class="content-show-full" href = "/2018/05/29/WSTA_L21_machine_translation_word/" >
+            <a class="content-show-full" href = "/2018/05/29/WSTA_L22_machine_translation_phrase/" >
                 <div class="abstract-content">
-                    Translation is “AI-hard” challenge: preserving the _meaning_ and the _fluency_ of the text.
-STATISTICAL MT
-Noisy Channel Model
-Language model $P(e)$ -&gt; e -&gt; encoder channel $P(f|e)$ -&gt; f -&gt; decoder $argmax P(e|f)$ -&gt; $\hat{e}$
-Two components: language model (LM); translation model ...
+                    WORD-BASED AND PHRASE-BASED MTWord based model: overly simplistic formulation — only used for _alignment_, not actual _translation_.
+Phrase based MT: treats N-grams as translation units, referred to as ‘phrases’.
+
+Phrase-pairs memorise:
+
+common translation fragments
+
+common reordering patterns
+
+
+...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -190,23 +196,17 @@ Two components: language model (LM); translation model ...
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/29/WSTA_L22_machine_translation_phrase/" >
+            <a class="abstract-title" href = "/2018/05/29/WSTA_L21_machine_translation_word/" >
                 
-                    <span>WSTA 22 - MACHINE TRANSLATION</span>
+                    <span>WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</span>
             </a>
-            <a class="content-show-full" href = "/2018/05/29/WSTA_L22_machine_translation_phrase/" >
+            <a class="content-show-full" href = "/2018/05/29/WSTA_L21_machine_translation_word/" >
                 <div class="abstract-content">
-                    WORD-BASED AND PHRASE-BASED MTWord based model: overly simplistic formulation — only used for _alignment_, not actual _translation_.
-Phrase based MT: treats N-grams as translation units, referred to as ‘phrases’.
-
-Phrase-pairs memorise:
-
-common translation fragments
-
-common reordering patterns
-
-
-...
+                    Translation is “AI-hard” challenge: preserving the _meaning_ and the _fluency_ of the text.
+STATISTICAL MT
+Noisy Channel Model
+Language model $P(e)$ -&gt; e -&gt; encoder channel $P(f|e)$ -&gt; f -&gt; decoder $argmax P(e|f)$ -&gt; $\hat{e}$
+Two components: language model (LM); translation model ...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -538,16 +538,6 @@ Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Re
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 8 </div>
     
     <div class="post-archive">
@@ -565,12 +555,12 @@ Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Re
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L21_machine_translation_word/" >WSTA 21 - MACHINE TRANSLATION WORD BASED MODELS</a>
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" >WSTA 22 - MACHINE TRANSLATION</a>
         </li>
     
     
@@ -612,9 +602,9 @@ Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Re
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">NLP</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">reinforcement learning</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
