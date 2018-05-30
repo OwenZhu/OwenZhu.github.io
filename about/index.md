@@ -4,4 +4,4 @@ date:
 layout: about
 ---
 
-I'm a Mcs student from University of Melbourne, and interesting in machine learning and reinforcement learning.
+A MSc student at the University of Melbourne, research interest on machine learning and reinforcement learning.
