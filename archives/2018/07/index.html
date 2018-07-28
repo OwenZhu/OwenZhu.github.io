@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Stochastic evolutionary game dynamics · OwenZhu&#39;s Blog
+        OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -53,28 +53,17 @@
     <script src="/scripts/main.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- 谷歌统计  -->
     
 </head>
 
     
-        <body class="post-body">
     
-    
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >OwenZhu&#39;s Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">Stochastic evolutionary game dynamics</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>OwenZhu's Blog</a>
 </header>
@@ -82,50 +71,21 @@
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Stochastic evolutionary game dynamics
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/09/25</span>
-                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                    <span class="iconfont-archer">&#xe604;</span>
-                    <span id="busuanzi_value_page_pv"></span>
-                </span>
-                <span class="shareWrapper">
-                    <span class="iconfont-archer shareIcon">
-                        &#xe601;
-                    </span>
-                    <span class="bdsharebuttonbox">
-                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
-                    </span>
-                </span>
-            </div>
         
     </div>
 </div>
@@ -193,74 +153,41 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h1 id="Stochastic-evolutionary-game-dynamics"><a href="#Stochastic-evolutionary-game-dynamics" class="headerlink" title="Stochastic evolutionary game dynamics"></a>Stochastic evolutionary game dynamics</h1><blockquote>
-<p>Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Reviews of Nonlinear Dynamics and Complexity, 2, 25–61.</p>
-</blockquote>
-<p>文章由Arne Traulsen和Christoph Hauert共同撰写。该文章详细介绍了有关进化博弈理论的相关概念，同时给出了完善的数学模型。</p>
-<h2 id="博弈论和进化博弈论"><a href="#博弈论和进化博弈论" class="headerlink" title="博弈论和进化博弈论"></a>博弈论和进化博弈论</h2><p>在文章的开头作者指出了早期的博弈论（game theory）基于以下两个基本的假设：</p>
-<ul>
-<li>人类是理性（rational）的</li>
-<li>与他们交互的对象同样清楚他们是理性的，反之亦然</li>
-</ul>
-<p>因此每个竞争者都可以通过优化一般效用函数（common utility function）来制定策略，确保能够将个人收益最大化；与此同时，他人采取的行动也能够完全通过该函数进行预判。但是作者指出，这样的假设是不切实际的——即使仅仅考虑个体A和个体B之间的简单互动，个体也无法做出绝对理性的决策：A预知到B的行为，B预知到A预知到B的行为……这将导致无穷的猜疑链。</p>
-<p>经济学领域提出了一种可避免上述情况的方法——有限的理性（bounded rationality）。如果将获取和处理信息的开销纳入考虑的范围，那么人类就无法做到完全理性。这等同于给他们的“理性”添加了约束上限，完全预测他人的行为也就不可能做到。</p>
-<p>在生物学领域，研究者们也提出了全然不同的处理方式。John Maynard Smith和 George Price于1970年代提出了进化博弈理论（evolutionary game theory）。他们认为效用函数（通常被认为是博弈的回报）应当等同于“生殖适应性”（reproductive fitness）。进化博弈理论与经典博弈理论不同于以下两个层面：</p>
-<ul>
-<li>进化博弈理论的研究对象是基于群体的，而不是研究两个（或少量）单独的参与者</li>
-<li>进化博弈理论用自然的方式将动力学（dynamics）引入系统</li>
-</ul>
-<p>对于进化博弈理论有两种理解：</p>
-<ul>
-<li>策略是编码在个体的基因中的，成功的策略类型(types)将会在群体中大量繁殖</li>
-<li>社会演化。成功个体的行为总是会被其他个体借鉴模仿</li>
-</ul>
-<h2 id="复制动力学"><a href="#复制动力学" class="headerlink" title="复制动力学"></a>复制动力学</h2><p>下面这个简单的数学公式展示了不同策略的进化密度函数：</p>
-<script type="math/tex; mode=display">
-\dot{x_{i}}=x_{i}\left(\pi_{i}-\left<\pi\right>\right)</script><p>上式称为复制方程（replicaor equation）。其中$x_i$指策略类型$i$在群体中占的比例，$\pi$是适应性值而$\left&lt;\pi\right&gt;$是整个群体的平均回报。说明了如果类型i的$\pi$大于$\left&lt;\pi\right&gt;$，那么类型$\pi$的密度就会上升，反之则减少。如果对于所有策略的适应性pi值都是固定的话，就称之为固定选择（constant selection）。通常来说，策略类型i的Pi值取决于群体的构成——也就是取决于所有其他的策略类型的比例，所以这一动态变化是非线性的。</p>
-<p>接着作者通过经典的二人博弈（2x2 game）展示了上述过程。通过replicator equation，作者区分出了以下四种一般情形：</p>
-<ul>
-<li><strong>Dominance</strong>：这种情况下，不管对手采取什么样的行动，采取某种特定的策略总是最优。</li>
-<li><strong>Bistability</strong>：相应的博弈称为协调博弈（coordination games）。个体能够找到平均收益最大化的策略。如果对手无法信赖，那么个体就应该转向能够避免最大损失的策略。这种情况将会导向风险主导（risk dominance）的层面。</li>
-<li><strong>Coexistence</strong>：群体中稳定存在着不同策略类型的混合，但其密度是不稳定的。</li>
-<li><strong>Neutrality</strong>：所有策略密度都是固定的。这样非普遍的情况激不起人们太大的兴趣，但是在有限群体的动态进化博弈里它将发挥重要作用。</li>
-</ul>
-<p>复制方程能够呈现丰富的动态内容：它能够表示基因通过复制以增强适应性和模仿他者的策略来决策。但是复制动力学仅仅只是确定动态选择（deterministic selection dynamics）的其中一种变体。它无法解释的是个体有时候能创造性地采用之前群体中从未出现过的策略。</p>
-<h2 id="有限群体中的进化博弈论"><a href="#有限群体中的进化博弈论" class="headerlink" title="有限群体中的进化博弈论"></a>有限群体中的进化博弈论</h2>
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2017/12/19/291217/" title= Tensorflow architecture analysis >
-                    <span>Next Post</span>
-                    <span>Tensorflow architecture analysis</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2017/09/17/290917/" title= TensorFlow Agents：基于TensorFlow的高效批处理增强学习 >
-                    <span>Previous Post</span>
-                    <span>TensorFlow Agents：基于TensorFlow的高效批处理增强学习</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
+            <main class="main index-page">
     
     
-    <!--PC版-->
-
-    <!--PC版-->
-
-
     
-    <!-- 评论 -->
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/07/28/ELMo_note/" >
+                
+                    <span>Note - Deep contextualized word representations</span>
+            </a>
+            <a class="content-show-full" href = "/2018/07/28/ELMo_note/" >
+                <div class="abstract-content">
+                    Note: Deep contextualized word representations
+Peters et al. - 2018 - Deep contextualized word representations
+
+IntroductionThey introduce a new type of deep contextualised word representation complex characteristics of word use. Their word vectors are learned functions of the internal states of ...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = NLP>NLP</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/07/28</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
 </main>
             <!-- profile -->
             
@@ -308,13 +235,6 @@
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Stochastic-evolutionary-game-dynamics"><span class="toc-number">1.</span> <span class="toc-text">Stochastic evolutionary game dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#博弈论和进化博弈论"><span class="toc-number">1.1.</span> <span class="toc-text">博弈论和进化博弈论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复制动力学"><span class="toc-number">1.2.</span> <span class="toc-text">复制动力学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有限群体中的进化博弈论"><span class="toc-number">1.3.</span> <span class="toc-text">有限群体中的进化博弈论</span></a></li></ol></li></ol>
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
@@ -566,7 +486,7 @@ jsonContent:
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
 
