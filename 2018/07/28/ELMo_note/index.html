@@ -211,7 +211,8 @@ p(t_1, t_2, \ldots, t_N) = \Pi^{N}_{k=1}p(t_k|t_1, t_2, \ldots, t_{k-1})</script
 <script type="math/tex; mode=display">
 p(t_1, t_2, \ldots, t_N) = \Pi^{N}_{k=1}p(t_k|t_{k+1}, t_{k+2}, \ldots, t_{N})</script><p>The formulation jointly maximises the log likelihood:</p>
 <script type="math/tex; mode=display">
-\Pi^{N}_{k=1}(\log{p(t_k|t_1, t_2, \ldots, t_{k-1};\Theta_{x}, \vec{\Theta}_{LSTM}, \Theta_{s})} + \log{p(t_k|t_{k+1}, t_{k+2}, \ldots, t_{N};\Theta_{x}, \overleftarrow{\Theta}_{LSTM}, \Theta_{s})})</script>
+\Pi^{N}_{k=1}(\log{p(t_k|t_1, t_2, \ldots, t_{k-1};\Theta_{x}, \vec{\Theta}_{LSTM}, \Theta_{s})} + \log{p(t_k|t_{k+1}, t_{k+2}, \ldots, t_{N};\Theta_{x}, \overleftarrow{\Theta}_{LSTM}, \Theta_{s})})</script><p>The parameters both the token representation $\Theta_{x}$ and softmax layer $\Theta_{s}$ are shared in the forward and backward direction.</p>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -227,6 +228,21 @@ p(t_1, t_2, \ldots, t_N) = \Pi^{N}_{k=1}p(t_k|t_{k+1}, t_{k+2}, \ldots, t_{N})</
     </ul>
     <!-- 评论插件 -->
     <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zODQyMC8xNDk0OA==>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
 
 <!-- City版安装代码已完成 -->
     
@@ -304,6 +320,10 @@ p(t_1, t_2, \ldots, t_N) = \Pi^{N}_{k=1}p(t_k|t_{k+1}, t_{k+2}, \ldots, t_{N})</
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
     
     
     
