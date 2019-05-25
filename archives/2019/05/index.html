@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Lecture Notes for Reinforcement Learning (MDP) · OwenZhu&#39;s Blog
+        OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -53,28 +53,17 @@
     <script src="/scripts/main.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- 谷歌统计  -->
     
 </head>
 
     
-        <body class="post-body">
     
-    
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >OwenZhu&#39;s Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">Lecture Notes for Reinforcement Learning (MDP)</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>OwenZhu's Blog</a>
 </header>
@@ -82,56 +71,21 @@
         <div class="site-intro">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Lecture Notes for Reinforcement Learning (MDP)
-            <!-- 404 -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = reinforcement learning>reinforcement learning</a>
-    
-</div>
-            
-            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/19</span>
-                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                    <span class="iconfont-archer">&#xe604;</span>
-                    <span id="busuanzi_value_page_pv"></span>
-                </span>
-                <span class="shareWrapper">
-                    <span class="iconfont-archer shareIcon">
-                        &#xe601;
-                    </span>
-                    <span class="bdsharebuttonbox">
-                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
-                    </span>
-                </span>
-            </div>
         
     </div>
 </div>
@@ -199,78 +153,37 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <blockquote>
-<p>Reference: David Silver, UCL reinforcement learning, lecture 2; CS 294 Deep Reinforcement Learning, Fall 2017</p>
-</blockquote>
-<h2 id="Markov-Process-or-Markov-Chain"><a href="#Markov-Process-or-Markov-Chain" class="headerlink" title="Markov Process (or Markov Chain)"></a>Markov Process (or Markov Chain)</h2><p>Here we assume that the environment is fully observable, which means “the current state completely characterises the process”.</p>
-<p>A Markov process is a tuple $\left&lt; S, P \right&gt;$, where $S$ denotes the state space (discrete or continuous) and $P$ denotes the state transition probability matrix. </p>
-<p>Sometimes we use the transition operator $T$ instead of $P$, but why it is an operator? Suppose we have a vector of probabilities $\vec{\mu}_t$ (which means we are not completely sure which state we are actually in), and let $\mu_{t,i} = p(s_t = i)$. Then $\vec{\mu}_{t+1}$ can be obtain by $T\vec{\mu}_t$, so it is a linear operator. If states are continuous it is still an infinitely large linear operator.</p>
-<p>Therefore, an agent has nothing to do in a Markov process, who just translates from one state to another state following by the transition probability. </p>
-<h2 id="Markov-Reward-Process"><a href="#Markov-Reward-Process" class="headerlink" title="Markov Reward Process"></a>Markov Reward Process</h2><p>A Markov process converts to a Markov reward process, when the reward function $R$ and discount factor $\gamma$ are introduced to it. An agent walks around (still totally depends on environment) and environment will give it a signal (reward).</p>
-<h2 id="Markov-Decision-Process"><a href="#Markov-Decision-Process" class="headerlink" title="Markov Decision Process"></a>Markov Decision Process</h2><ul>
-<li><p>Bellman Expectation Equation</p>
-<p>The state-value function:</p>
-<script type="math/tex; mode=display">
-v_\pi(s)=E_\pi[R_{t+1}+\gamma v_\pi(S_{t+1}) |S_t=s]</script><p>The action-value function:</p>
-<script type="math/tex; mode=display">
-q_\pi(s, a)=E_\pi[R_{t+1}+\gamma q_\pi(S_{t+1},A_{t+1}) |S_t=s,A_t=a]</script><p>We can reform Bellman expectation equation, by replacing $v_\pi(s)$ with $q_\pi(s, a)$ or replacing $q_\pi(s, a)$ with $v_\pi(s)$ on the right-hand side. It’s very very important to understand the relationship between $v_\pi(s)$ and $q_\pi(s, a)$ here. We will find the equation appear everywhere in the following lectures. Same as Markov process, we can find the direct closed form solution of Bellman expectation equation when given $\gamma$, $R_\pi$ and $P_\pi$. </p>
-<script type="math/tex; mode=display">
-v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
-<li><p>Bellman Optimal Equation</p>
-<p>In the same way, we can reform the Bellman Optimal Equation by $v_*$ or $q_*$. The $action$ in $q_*(s, a)$ is considered to be an input, after that the agent follows $\pi^*$ and gains all returns. $v_*$ equals to $q_*$ only if the $action$ is $a^*$. There is no closed form solution of Bellman optimal equation. The $max()$ function is introduced to Bellman Optimal Equation, so it’s not linear. Instead, we can use other iteration approaches: policy iteration, value iteration, Q learning, SARSA, etc.</p>
-</li>
-</ul>
-
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-            <li class="next">
-                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
-                    <span>Next Post</span>
-                    <span>WSTA 22 - MACHINE TRANSLATION</span>
-                </a>
-            </li>
-        
-        
-            <li class="previous">
-                <a href= "/2017/12/19/291217/" title= An Overview inside Distributed Tensorflow Workflow >
-                    <span>Previous Post</span>
-                    <span>An Overview inside Distributed Tensorflow Workflow</span>
-                </a>
-            </li>
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid= MTAyMC8zODQyMC8xNDk0OA==>
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
+            <main class="main index-page">
     
     
-    <!--PC版-->
-
-    <!--PC版-->
-
-
     
-    <!-- 评论 -->
+        <article class="index-post">
+            <a class="abstract-title" href = "/2019/05/25/250519/" >
+                
+                    <span>[Untitled Post]</span>
+            </a>
+            <a class="content-show-full" href = "/2019/05/25/250519/" >
+                <div class="abstract-content">
+                    Tensorflow Serving Source Code WalkthroughModel Servers Mainmain.ccflag_list: parsed tf model servers options, includes:
+
+port: Port to listen on for gRPC API
+grpc_socket_path: listen to a UNIX socket for gRPC API on the given path
+rest_api_port: Port to listen on for HTTP/REST API.
+rest_api_num_...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2019/05/25</span>
+                </div>
+            </div>
+        </article>
+    
+    <!-- paginator  -->
+    
 </main>
             <!-- profile -->
             
@@ -318,13 +231,6 @@ v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Process-or-Markov-Chain"><span class="toc-number">1.</span> <span class="toc-text">Markov Process (or Markov Chain)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Reward-Process"><span class="toc-number">2.</span> <span class="toc-text">Markov Reward Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Decision-Process"><span class="toc-number">3.</span> <span class="toc-text">Markov Decision Process</span></a></li></ol>
-    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
@@ -599,7 +505,7 @@ jsonContent:
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
 

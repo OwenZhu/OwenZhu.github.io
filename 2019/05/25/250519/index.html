@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Lecture Notes for Reinforcement Learning (MDP) · OwenZhu&#39;s Blog
+        OwenZhu&#39;s Blog
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -72,7 +72,7 @@
                 <a href="/" >OwenZhu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Lecture Notes for Reinforcement Learning (MDP)</a>
+                <a href="#" class="post-name"></a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Lecture Notes for Reinforcement Learning (MDP)
+            [Untitled Post]
             <!-- 404 -->
             
         </h1>
@@ -109,16 +109,10 @@
         
             <!-- 文章页标签  -->
             
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = reinforcement learning>reinforcement learning</a>
-    
-</div>
-            
             <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/19</span>
+                <span class="post-intro-time">2019/05/25</span>
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe604;</span>
                     <span id="busuanzi_value_page_pv"></span>
@@ -201,44 +195,46 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <blockquote>
-<p>Reference: David Silver, UCL reinforcement learning, lecture 2; CS 294 Deep Reinforcement Learning, Fall 2017</p>
-</blockquote>
-<h2 id="Markov-Process-or-Markov-Chain"><a href="#Markov-Process-or-Markov-Chain" class="headerlink" title="Markov Process (or Markov Chain)"></a>Markov Process (or Markov Chain)</h2><p>Here we assume that the environment is fully observable, which means “the current state completely characterises the process”.</p>
-<p>A Markov process is a tuple $\left&lt; S, P \right&gt;$, where $S$ denotes the state space (discrete or continuous) and $P$ denotes the state transition probability matrix. </p>
-<p>Sometimes we use the transition operator $T$ instead of $P$, but why it is an operator? Suppose we have a vector of probabilities $\vec{\mu}_t$ (which means we are not completely sure which state we are actually in), and let $\mu_{t,i} = p(s_t = i)$. Then $\vec{\mu}_{t+1}$ can be obtain by $T\vec{\mu}_t$, so it is a linear operator. If states are continuous it is still an infinitely large linear operator.</p>
-<p>Therefore, an agent has nothing to do in a Markov process, who just translates from one state to another state following by the transition probability. </p>
-<h2 id="Markov-Reward-Process"><a href="#Markov-Reward-Process" class="headerlink" title="Markov Reward Process"></a>Markov Reward Process</h2><p>A Markov process converts to a Markov reward process, when the reward function $R$ and discount factor $\gamma$ are introduced to it. An agent walks around (still totally depends on environment) and environment will give it a signal (reward).</p>
-<h2 id="Markov-Decision-Process"><a href="#Markov-Decision-Process" class="headerlink" title="Markov Decision Process"></a>Markov Decision Process</h2><ul>
-<li><p>Bellman Expectation Equation</p>
-<p>The state-value function:</p>
-<script type="math/tex; mode=display">
-v_\pi(s)=E_\pi[R_{t+1}+\gamma v_\pi(S_{t+1}) |S_t=s]</script><p>The action-value function:</p>
-<script type="math/tex; mode=display">
-q_\pi(s, a)=E_\pi[R_{t+1}+\gamma q_\pi(S_{t+1},A_{t+1}) |S_t=s,A_t=a]</script><p>We can reform Bellman expectation equation, by replacing $v_\pi(s)$ with $q_\pi(s, a)$ or replacing $q_\pi(s, a)$ with $v_\pi(s)$ on the right-hand side. It’s very very important to understand the relationship between $v_\pi(s)$ and $q_\pi(s, a)$ here. We will find the equation appear everywhere in the following lectures. Same as Markov process, we can find the direct closed form solution of Bellman expectation equation when given $\gamma$, $R_\pi$ and $P_\pi$. </p>
-<script type="math/tex; mode=display">
-v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
-<li><p>Bellman Optimal Equation</p>
-<p>In the same way, we can reform the Bellman Optimal Equation by $v_*$ or $q_*$. The $action$ in $q_*(s, a)$ is considered to be an input, after that the agent follows $\pi^*$ and gains all returns. $v_*$ equals to $q_*$ only if the $action$ is $a^*$. There is no closed form solution of Bellman optimal equation. The $max()$ function is introduced to Bellman Optimal Equation, so it’s not linear. Instead, we can use other iteration approaches: policy iteration, value iteration, Q learning, SARSA, etc.</p>
+        <h1 id="Tensorflow-Serving-Source-Code-Walkthrough"><a href="#Tensorflow-Serving-Source-Code-Walkthrough" class="headerlink" title="Tensorflow Serving Source Code Walkthrough"></a>Tensorflow Serving Source Code Walkthrough</h1><h2 id="Model-Servers-Main"><a href="#Model-Servers-Main" class="headerlink" title="Model Servers Main"></a>Model Servers Main</h2><h3 id="main-cc"><a href="#main-cc" class="headerlink" title="main.cc"></a>main.cc</h3><p><code>flag_list</code>: parsed tf model servers options, includes:</p>
+<ul>
+<li>port: Port to listen on for gRPC API</li>
+<li>grpc_socket_path: listen to a UNIX socket for gRPC API on the given path</li>
+<li>rest_api_port: Port to listen on for HTTP/REST API.</li>
+<li><p>rest_api_num_threads: Number of threads for HTTP/REST API processing.</p>
 </li>
+<li><p>rest_api_timeout_in_ms: Timeout for HTTP/REST API calls.</p>
+</li>
+<li>enable_batching: enable batching</li>
+<li>batching_parameters_file: read an ascii BatchingParameters protobuf from the supplied file name and use the contained values instead of the defaults.</li>
+<li>model_config_file: read an ascii ModelServerConfig protobuf from the supplied file name, and serve the models in that file. This config file can be used to specify multiple models to serve and other advanced parameters including non-default version policy. (If used, <code>—model_name</code>, <code>—model_base_path</code> are ignored.)</li>
+<li>model_name: name of model (ignored <code>if —model_config_file</code> flag is set)</li>
+<li>model_base_path: path to export (ignored <code>if —model_config_file</code> flag is set, otherwise required)</li>
+<li>max_num_load_retries: maximum number of times it retries loading a model after the first failure, before giving up.</li>
+<li>load_retry_interval_micros: The interval, in microseconds, between each servable load retry</li>
+<li>file_system_poll_wait_seconds: Interval in seconds between each poll of the filesystem for new model version.</li>
+<li>flush_filesystem_caches: If true (the default), filesystem caches will be flushed after the initial load of all servables, and after each subsequent individual servable reload. This reduces memory consumption of the model server, at the potential cost of cache misses if model files are accessed after servables are loaded.</li>
+<li>tensorflow_session_parallelism: Number of threads to use for running a Tensorflow session. Auto-configured by default.</li>
+<li>tensorflow_intra_op_parallelism: Number of threads to use to parallelize the execution of an individual op. Auto-configured by default.</li>
+<li>tensorflow_inter_op_parallelism: Controls the number of operators that can be executed simultaneously. Auto-configured by default.</li>
+<li>ssl_config_file: If non-empty, read an ascii SSLConfig protobuf from the supplied file name and set up a secure gRPC channel.</li>
+<li>platform_config_file: If non-empty, read an ascii PlatformConfigMap protobuf from the supplied file name, and use that platform config instead of the Tensorflow platform.</li>
+<li>per_process_gpu_memory_fraction: Fraction that each process occupies of the GPU memory space the value is between 0.0 and 1.0 (with 0.0 as the default) If 1.0, the server will allocate all the memory when the server starts, If 0.0, Tensorflow will automatically select a value.</li>
+<li>saved_model_tags: Comma-separated set of tags corresponding to the meta graph def to load from SavedModel.</li>
+<li>grpc_channel_arguments: A comma separated list of arguments to be passed to the grpc server.</li>
+<li>enable_model_warmup: Enables model warmup, which triggers lazy initializations (such as TF optimizations) at load time, to reduce first request latency.</li>
+<li>version: Display version.</li>
+<li>monitoring_config_file: read an ascii MonitoringConfig protobuf from the supplied file name.</li>
 </ul>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/05/29/WSTA_L22_machine_translation_phrase/" title= WSTA 22 - MACHINE TRANSLATION >
-                    <span>Next Post</span>
-                    <span>WSTA 22 - MACHINE TRANSLATION</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2017/12/19/291217/" title= An Overview inside Distributed Tensorflow Workflow >
+                <a href= "/2018/07/28/ELMo_note/" title= Note - Deep contextualized word representations >
                     <span>Previous Post</span>
-                    <span>An Overview inside Distributed Tensorflow Workflow</span>
+                    <span>Note - Deep contextualized word representations</span>
                 </a>
             </li>
         
@@ -323,7 +319,7 @@ v_\pi=\left(I-\gamma P^\pi\right)^{-1}R^\pi</script></li>
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Process-or-Markov-Chain"><span class="toc-number">1.</span> <span class="toc-text">Markov Process (or Markov Chain)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Reward-Process"><span class="toc-number">2.</span> <span class="toc-text">Markov Reward Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markov-Decision-Process"><span class="toc-number">3.</span> <span class="toc-text">Markov Decision Process</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tensorflow-Serving-Source-Code-Walkthrough"><span class="toc-number">1.</span> <span class="toc-text">Tensorflow Serving Source Code Walkthrough</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Model-Servers-Main"><span class="toc-number">1.1.</span> <span class="toc-text">Model Servers Main</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-cc"><span class="toc-number">1.1.1.</span> <span class="toc-text">main.cc</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
