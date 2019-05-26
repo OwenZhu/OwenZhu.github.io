@@ -195,35 +195,34 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Stochastic-evolutionary-game-dynamics"><a href="#Stochastic-evolutionary-game-dynamics" class="headerlink" title="Stochastic evolutionary game dynamics"></a>Stochastic evolutionary game dynamics</h1><blockquote>
+        <h1 id="Stochastic-Evolutionary-Game-Dynamics"><a href="#Stochastic-Evolutionary-Game-Dynamics" class="headerlink" title="Stochastic Evolutionary Game Dynamics"></a>Stochastic Evolutionary Game Dynamics</h1><blockquote>
 <p>Traulsen, A., &amp; Hauert, C. (2009). Stochastic evolutionary game dynamics. Reviews of Nonlinear Dynamics and Complexity, 2, 25–61.</p>
 </blockquote>
 <h2 id="Game-theory-and-evolution"><a href="#Game-theory-and-evolution" class="headerlink" title="Game theory and evolution"></a><strong>Game theory and evolution</strong></h2><p>早期的 game theory 基于以下假设：</p>
 <ul>
 <li><p><strong>人类是 rational 的</strong>；</p>
 </li>
-<li><p><strong>同时他们认为：互动对象知道自己的决策是 rational 的，反之亦然</strong></p>
+<li><p><strong>同时他们也意识到：互动对象知道自己的决策是 rational 的，反之亦然</strong></p>
 </li>
 </ul>
-<p>因此每个个体都可以基于 <em>common utility function</em> 来制定策略。因为他人采取的行动能够被预测，以指定出最优的策略确保能够将个人收益最大化。但是以上假设是<strong>不切实际</strong>的——即使仅仅考虑个体A和个体B之间的简单互动，个体也无法做出完全理性的决策：A预知到B的行为，B预知到A预知到B的行为……这将导致 infinite iteration。</p>
-<p>经济学领域提出了一种可避免上述情况的方法——有限的理性（bounded rationality）。如果将获取和处理信息的开销纳入考虑的范围，那么人类就无法做到完全理性。这等同于给他们的“理性”添加了约束上限，完全预测他人的行为也就不可能做到。</p>
-<p>在生物学领域，研究者们也提出了全然不同的处理方式。John Maynard Smith和 George Price于1970年代提出了进化博弈理论（evolutionary game theory）。他们认为效用函数（通常被认为是博弈的回报）应当等同于“生殖适应性”（reproductive fitness）。进化博弈理论与经典博弈理论不同于以下两个层面：</p>
+<p>因此每个个体都可以基于 <em>utility function</em> 来制定策略。因为他人采取的行动能够被预测，以制定出最优的策略确保能够将个人收益最大化。但是以上假设是<strong>不切实际</strong>的——即使仅仅考虑个体A和个体B之间的简单互动，个体也无法做出完全理性的决策：A预知到B的行为，B预知到A预知到B的行为……这将导致 infinite iteration。</p>
+<p>经济学领域提出了可避免上述情形的概念—— <em>bounded rationality</em>。如果将获取和处理信息的 cost 纳入考虑的范围，那么人类就无法做到完全理性地分析，准确地预测他人的行为也就不可能达成。</p>
+<p>在生物学领域，研究者们也提出了全然不同的处理方式。John Maynard Smith和 George Price 提出了 evolutionary game theory。他们认为 utility function（通常被认为是博弈的回报）与 reproductive fitness 是一致的。所以他们的理论与 classical game theory 不同于以下两个层面：</p>
 <ul>
-<li>进化博弈理论的研究对象是基于群体的，而不是研究两个（或少量）单独的参与者</li>
-<li>进化博弈理论用自然的方式将动力学（dynamics）引入系统</li>
+<li>evolutionary game theory 的研究对象是基于群体的，而不是研究两个（或少量）的参与者</li>
+<li>与 static classical game theory 不同，evolutionary game theory 通过自然的方式将 dynamics 引入被研究的系统</li>
 </ul>
-<p>对于进化博弈理论有两种理解：</p>
+<p>对于 evolutionary game theory 存在着两种解释：</p>
 <ul>
-<li>策略是编码在个体的基因中的，成功的策略类型(types)将会在群体中大量繁殖</li>
-<li>社会演化。成功个体的行为总是会被其他个体借鉴模仿</li>
+<li>传统角度：strategies 被编码在个体的基因里，成功的 types 将会在群体中传播</li>
+<li>社会演化：成功的个体总是会被其他个体借鉴模仿</li>
 </ul>
-<h2 id="复制动力学"><a href="#复制动力学" class="headerlink" title="复制动力学"></a>复制动力学</h2><p>下面这个简单的数学公式展示了不同策略的进化密度函数：</p>
-<script type="math/tex; mode=display">
-\dot{x_{i}}=x_{i}\left(\pi_{i}-\left<\pi\right>\right)</script><p>上式称为复制方程（replicaor equation）。其中$x_i$指策略类型$i$在群体中占的比例，$\pi$是适应性值而$\left&lt;\pi\right&gt;$是整个群体的平均回报。说明了如果类型i的$\pi$大于$\left&lt;\pi\right&gt;$，那么类型$\pi$的密度就会上升，反之则减少。如果对于所有策略的适应性pi值都是固定的话，就称之为固定选择（constant selection）。通常来说，策略类型i的Pi值取决于群体的构成——也就是取决于所有其他的策略类型的比例，所以这一动态变化是非线性的。</p>
-<p>接着作者通过经典的二人博弈（2x2 game）展示了上述过程。通过replicator equation，作者区分出了以下四种一般情形：</p>
+<h2 id="复制动力学"><a href="#复制动力学" class="headerlink" title="复制动力学"></a>复制动力学</h2><script type="math/tex; mode=display">
+\dot{x_{i}}=x_{i}\left(\pi_{i}-\left<\pi\right>\right)</script><p>上式称为 replicaor equation。其中 $x_i$ 指 strategy type $i$ 在群体中占的比例，$\pi$ 是 fitness 而 $\left&lt;\pi\right&gt;$ 是整个群体的平均 payoff。说明了如果 $i$ 的 $\pi$ 大于 $\left&lt;\pi\right&gt;$，那么$i$ 的数量就会上升，反之则减少。如果 $\pi_i$ 的值是固定的，就称之为 constant selection。但是通常来说，$\pi_i$ 取决于其他所有的 $x_i$ 比例，所以其变化是往往是非线性的。</p>
+<p>例如经典的 $2\times2$ games 有以下四种情形：</p>
 <ul>
 <li><strong>Dominance</strong>：这种情况下，不管对手采取什么样的行动，采取某种特定的策略总是最优。</li>
-<li><strong>Bistability</strong>：相应的博弈称为协调博弈（coordination games）。个体能够找到平均收益最大化的策略。如果对手无法信赖，那么个体就应该转向能够避免最大损失的策略。这种情况将会导向风险主导（risk dominance）的层面。</li>
+<li><strong>Bistability</strong>：称为 coordination games。个体能够找到平均收益最大化的策略。如果对手无法信赖，那么个体就应该转向能够避免最大损失的策略。这种情况将会导向 risk dominance。</li>
 <li><strong>Coexistence</strong>：群体中稳定存在着不同策略类型的混合，但其密度是不稳定的。</li>
 <li><strong>Neutrality</strong>：所有策略密度都是固定的。这样非普遍的情况激不起人们太大的兴趣，但是在有限群体的动态进化博弈里它将发挥重要作用。</li>
 </ul>
@@ -329,7 +328,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Stochastic-evolutionary-game-dynamics"><span class="toc-number">1.</span> <span class="toc-text">Stochastic evolutionary game dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Game-theory-and-evolution"><span class="toc-number">1.1.</span> <span class="toc-text">Game theory and evolution</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复制动力学"><span class="toc-number">1.2.</span> <span class="toc-text">复制动力学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有限群体中的进化博弈论"><span class="toc-number">1.3.</span> <span class="toc-text">有限群体中的进化博弈论</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Stochastic-Evolutionary-Game-Dynamics"><span class="toc-number">1.</span> <span class="toc-text">Stochastic Evolutionary Game Dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Game-theory-and-evolution"><span class="toc-number">1.1.</span> <span class="toc-text">Game theory and evolution</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复制动力学"><span class="toc-number">1.2.</span> <span class="toc-text">复制动力学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有限群体中的进化博弈论"><span class="toc-number">1.3.</span> <span class="toc-text">有限群体中的进化博弈论</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
